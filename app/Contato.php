@@ -19,7 +19,7 @@ class Contato extends Model
     }
 
     public function getDataNascimentoAttribute($value){
-        return dateFormaDatabaseScreen($value, 'screen');
+        return dateFormatDatabaseScreen($value, 'screen');
     }
 
     public function setDataNascimentoAttribute($value){
