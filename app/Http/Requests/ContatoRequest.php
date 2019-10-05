@@ -30,7 +30,7 @@ class ContatoRequest extends FormRequest
                     "nome" => "required|max:100",
                     "telefone" => "required|max:15",
                     "email" => "email|max:200|unique:contatos",
-                    "data_nascimento" => 'data_format: "d/m/Y"',
+                    "data_nascimento" => 'date_format: "d/m/Y"',
                     "avatar" => "nullable|sometimes|image|mimes:jpg,jpeg,png,gif"
                 ];
                 break;
@@ -41,7 +41,7 @@ class ContatoRequest extends FormRequest
                     "nome" => "required|max:100",
                     "telefone" => "required|max:15",
                     "email" => "email|max:200|unique:contatos,email,".$this->id,
-                    "data_nascimento" => 'data_format: "d/m/Y"',
+                    "data_nascimento" => 'date_format: "d/m/Y"',
                     "avatar" => "nullable|sometimes|image|mimes:jpg,jpeg,png,gif"
                 ];
                 break;

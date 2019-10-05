@@ -30,9 +30,9 @@ function validate_delete() {
                 <div class="card-header">Contato</div>
                 <form action="{{ url('contatos/'.$data->id) }}" method="post" onsubmit="return validate_delete()">
                     <div class="card-body">
-                        @method('DELETE')
-
-                        {{ csrf_field() }}
+                        
+                    
+                        {{ csrf_field() }} 
 
                         <div class="row">
                             <div class="col-sm-4">
@@ -68,7 +68,11 @@ function validate_delete() {
                     </div>
                     <div class="card-footer text-right">
                         <a href="#" onclick="history.back()" class="btn btn-secondary">Voltar</a>
-                        <button type="submit" class="btn btn-danger">Excluir</button>
+                        <form action="{{ url('contatos/'.$data->id) }}" method="post">
+                            {{ csrf_field() }}
+                            {{ method_field('DELETE') }}
+                            <button type="submit" class="btn btn-danger">Excluir</button>
+                        </form>
                         <a href="{{ url('contatos/edit/'.$data->id) }}" class="btn btn-primary">Editar</a>
                     </div>
                 </form>

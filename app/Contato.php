@@ -23,7 +23,7 @@ class Contato extends Model
     }
 
     public function setDataNascimentoAttribute($value){
-        $this->attribute['data_nascimento'] = dateFormatDatabaseScreen($value);
+        $this->attributes['data_nascimento'] = dateFormatDatabaseScreen($value);
     }
 
     public function setAvatarAttribute($value){
