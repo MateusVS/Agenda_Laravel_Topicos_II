@@ -12,7 +12,7 @@
 */
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('contatos');
 
 
 Route::group(["middleware"=>"auth","prefix"=>"contatos"], function(){

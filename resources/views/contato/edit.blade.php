@@ -6,8 +6,11 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">Contato</div>
-                <form action="{{ url('contatos/'.$data->id) }}" method="post" enctype="multipart/form-data">
+                <form action="{{ url('contatos/'.$data->id) }}" method="POST" enctype="multipart/form-data">
                     <div class="card-body">
+                    {{ csrf_field() }}
+                    {{ method_field('PUT') }}
+                        <input type="text" name="_token" value="{{@csrf_token()}}">
                         <div class="form-group">
                             <label for="saudacao">Saudação</label>
                             <select id="saudacao" name="saudacao" class="form-control">
@@ -51,11 +54,7 @@
                     </div>
                     <div class="card-footer text-right">
                         <a href="#" onclick="history.back()" class="btn btn-secondary">Voltar</a>
-                        <form action="{{ url('contatos/'.$data->id) }}" method="post">
-                            {{ csrf_field() }}
-                            {{ method_field('PUT') }}
-                            <button type="submit" class="btn btn-primary">Salvar</button>
-                        </form>
+                        <button type="submit" class="btn btn-primary">Salvar</button>
                     </div>
                 </form>
             </div>

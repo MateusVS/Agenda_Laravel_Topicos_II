@@ -14,10 +14,11 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     @yield('stylecss')
+    
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-inverse navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
 
@@ -37,11 +38,11 @@
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
+                    <ul class="navbar-nav">
                         @guest
                         @else
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url('contatos') }}">Contatos <span class="sr-only">(current)</span></a>
+                        <li class="nav pos">
+                            
                         </li>
                         @endguest
                     </ul>
@@ -53,6 +54,7 @@
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Criar Conta</a></li>
                         @else
+                            <li><a class="nav-item" href="{{ url('contatos') }}">Contatos <span class="sr-only">(current)</span></a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
