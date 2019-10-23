@@ -14,7 +14,6 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('contatos');
 
-
 Route::group(["middleware"=>"auth","prefix"=>"contatos"], function(){
     Route::get('/', 'ContatoController@index');
     Route::get('/add', 'ContatoController@create');

@@ -12,11 +12,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     @yield('stylecss')
     
 </head>
-<body>
+<body class="degrade">
     <div id="app">
         <nav class="navbar navbar-default navbar-inverse navbar-static-top">
             <div class="container">

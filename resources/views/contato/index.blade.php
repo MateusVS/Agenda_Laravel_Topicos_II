@@ -1,29 +1,13 @@
-@extends('layouts.app');
+@extends('layouts.app')
 
-@section('stylecss');
-
-<style media="screen">
-    .img-avatar-xs{
-        width: 30px;
-        height: 30px;
-        border: 1px solid #c0c0c0;
-        borde-radius: 5px;
-    }
-
-    .a-line{
-        line-height:30px;
-    }
-</style>
-
-@endsection;
-
-@section('content');
+@section('content')
 <div class="container">
     <div class="card">
         <div class="card-header">
-        Contatos<a href="{{ url('contatos/add') }}" class="btn btn-primary btn-sm float-right">Novo</a>
+        Contatos<a href="{{ url('contatos/add') }}" class="btn btn-primary btn-sm direita">Novo</a>
         </div>
-        <div class="card-body p-0">
+        <br>
+        <div class="card-body p-0 card-inverse">
             <div class="table-responsive border-0">
                 <table class="table table-hover" style="margin-bottom:inherit">
                     <tbody>
@@ -45,4 +29,5 @@
         </div>
     </div>
 </div>
-@endsection;
+<br>
+@endsection

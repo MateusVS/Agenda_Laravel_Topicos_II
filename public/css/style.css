@@ -1,0 +1,39 @@
+.degrade{
+    background-image: linear-gradient(to right, purple, darkblue);
+    color: white;
+}
+
+.botao{
+    background-color:purple;
+    border: purple;
+}
+
+.botao:hover{
+    background-color:darkblue;
+    border: darkblue;
+}
+
+.roxo{
+    color:purple;
+}
+
+.card-inverse{
+    background-color: white;
+    color: purple;
+}
+
+.direita{
+    float: right;
+    margin-bottom: 30px;
+}
+
+.img-avatar-xs{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #c0c0c0;
+    borde-radius: 5px;
+}
+
+.a-line{
+    line-height:30px;
+}

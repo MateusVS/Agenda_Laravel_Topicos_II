@@ -10,7 +10,6 @@
                     <div class="card-body">
                     {{ csrf_field() }}
                     {{ method_field('PUT') }}
-                        <input type="text" name="_token" value="{{@csrf_token()}}">
                         <div class="form-group">
                             <label for="saudacao">Saudação</label>
                             <select id="saudacao" name="saudacao" class="form-control">
