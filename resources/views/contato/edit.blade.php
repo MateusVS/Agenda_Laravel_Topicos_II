@@ -6,10 +6,12 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">Contato</div>
-                <form action="{{ url('contatos/'.$data->id) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ url('contatos/'.$data->id) }}" method="post" enctype="multipart/form-data">
                     <div class="card-body">
-                    {{ csrf_field() }}
-                    {{ method_field('PUT') }}
+                        @method('PUT')
+
+                        @csrf
+
                         <div class="form-group">
                             <label for="saudacao">Saudação</label>
                             <select id="saudacao" name="saudacao" class="form-control">

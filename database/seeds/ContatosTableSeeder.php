@@ -11,16 +11,18 @@ class ContatosTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table("contatos")->insert([
-            "saudacao"=>"Sr.",
-            "nome"=>"Mateus Vinicius da Silva",
-            "telefone"=>"(19) 99925-6792",
-            "data_nascimento"=>"1998/06/03",
-            "email"=>"mateusviniciussilva07@gmail.com",
-            "nota"=>"Usuário padrão",
-            "created_at"=>date("Y-m-d H:i:s")
+        //Opção 1
+        DB::table('contatos')->insert([
+            'saudacao' => 'Sr.',
+            'nome' => 'Renato Dias',
+            'telefone' => '(19) 99761-4764',
+            'data_nascimento' => '1997/12/07',
+            'email' => 'renato@gmail.com',
+            'nota' => 'Usuário criado usando Seeder com método DB.',
+            'created_at' => date('Y-m-d H:i:s')
         ]);
 
-        factory(App\Contato::class,20)->create();
+        //Opção 2
+        factory(App\Contato::class, 20)->create();
     }
 }

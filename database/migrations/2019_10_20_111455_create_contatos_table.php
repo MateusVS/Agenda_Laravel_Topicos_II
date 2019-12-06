@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateContatosTable extends Migration
 {
@@ -19,9 +19,9 @@ class CreateContatosTable extends Migration
             $table->string('nome', 100);
             $table->char('telefone', 15);
             $table->string('email', 200)->nullable();
-            $table->date("data_nascimento")->nullable();
-            $table->string("avatar", 200)->nullable();
-            $table->text("nota")->nullable();
+            $table->date('data_nascimento')->nullable();
+            $table->string('avatar', 200)->nullable();
+            $table->text('nota')->nullable();
             $table->timestamps();
         });
     }
